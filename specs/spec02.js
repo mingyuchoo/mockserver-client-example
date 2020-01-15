@@ -1,0 +1,8 @@
+module.exports = {
+  httpRequest: {
+    path: "/some/path"
+  },
+  httpResponse: {
+    body: "some_response_body"
+  }
+};
