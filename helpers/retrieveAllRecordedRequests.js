@@ -3,10 +3,10 @@ var environment = require("./environment.json");
 
 module.exports = function() {
   mockServerClient(environment.host, environment.port)
-    .reset()
+    .retrieveRecordedRequests({})
     .then(
-      function() {
-        console.log("reset all state");
+      function(recordedRequests) {
+        console.log(JSON.stringify(recordedRequests));
       },
       function(error) {
         console.log(error);

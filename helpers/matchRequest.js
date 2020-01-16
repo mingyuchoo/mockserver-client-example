@@ -1,7 +1,8 @@
 var mockServerClient = require("mockserver-client").mockServerClient;
+var environment = require("./environment.json");
 
 module.exports = function(data) {
-  mockServerClient("localhost", 1080)
+  mockServerClient(environment.host, environment.port)
     .mockAnyResponse(data)
     .then(
       function() {
